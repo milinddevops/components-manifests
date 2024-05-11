@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: clinic-1.2.4-127-SNAPSHOT-deployment
+  name: clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOT-deployment
   labels:
-    app: clinic-1.2.4-127-SNAPSHOT-app
+    app: clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOT-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clinic-1.2.4-127-SNAPSHOT-app
+      app: clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOT-app
   template:
     metadata:
       labels:
-        app: clinic-1.2.4-127-SNAPSHOT-app
+        app: clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOT-app
     spec:
       containers:
-      - name: clinic-1.2.4-127-SNAPSHOT-app
-        image: "milinddocker/clinic-1.2.4-127-SNAPSHOTclinic-1.2.4-125-SNAPSHOT"
+      - name: clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOT-app
+        image: "milinddocker/clinic-1.2.4-128-SNAPSHOT1.2.4-127-SNAPSHOTclinic-1.2.4-125-SNAPSHOT"
         ports:
         - containerPort: 8082
         env:
