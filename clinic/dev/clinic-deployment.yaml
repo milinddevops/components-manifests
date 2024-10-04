@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: clinic-app
-        image: "milinddocker/clinic:1.2.4-156-SNAPSHOT"
+        image: "milinddocker/clinic:1.2.4-157-SNAPSHOT"
         ports:
         - containerPort: 8082
         env:
