@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: success-rate
+spec:
+  metrics:
+    - name: success-rate
+      provider:
+        job:
+          metadata:
+            labels:
+              analysis: application-success-rate
+              backoffLimit: 1
+              template:
+                spec:
+                  containers:
+                    - name: success-rate
+                      image: milinddocker/cicd:analyze-box
+                      env:
+                        - name: service_url
+                          value: "http://rollouts-demo-canary.default.svc.cluster.local:8080"
+                      command: ["/bin/bash", "-c"]
+                      args:
+                        - ./success-rate.sh 
+
+                
